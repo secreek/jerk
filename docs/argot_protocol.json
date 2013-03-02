@@ -1,0 +1,30 @@
+{
+  "name" : "hadventure.com",
+  "gh-pages-repo" : {
+    "url" : "https://github.com/hadventure/hadventure.github.com",
+    "branch" : "master"
+    },
+  "content-repo" : {
+    "url" : "https://github.com/hadventure/startup",
+    "branch" : "master"
+    },
+  "page-path" : ["index.html", "about.html", "join.html"],
+  "big-files" : {
+    "index" : ["<%= env['CONTENT-REPO']%>/index.md"],
+    "about" : [
+      "<%= env['CONTENT-REPO']%>/Recruitment-招聘/Intro-公司简介.md",
+      "<%= env['CONTENT-REPO']%>/Recruitment-招聘/Benifts-福利.md"
+    ],
+    "join" : [
+      "<%= env['CONTENT-REPO']%>/Recruitment-招聘/program-manager-项目经理.md",
+      "<%= env['CONTENT-REPO']%>/Recruitment-招聘/招聘行政助理.md",
+      "<%= env['CONTENT-REPO']%>/Recruitment-招聘/招聘后台架构师.md",
+      "<%= env['CONTENT-REPO']%>/Recruitment-招聘/前端工程师招聘广告.md"
+    ],
+  },
+  "templates" : {
+    "index" : "<%= env['GH-PAGES-REPO']%>/templates/index.html.erb",
+    "about" : "<%= env['GH-PAGES-REPO']%>/templates/about.html.erb",
+    "join" : "<%= env['GH-PAGES-REPO']%>/templates/join.html.erb"
+  }
+}
