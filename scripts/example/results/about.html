@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="海达网畅 : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBdmKUGYS9XHMyjAx7A8Tfa75Er-vFnN0s&sensor=true"></script>
+    <script>
+      function initialize() {
+        if (document.getElementById("map_canvas")) {
+          var point = new google.maps.LatLng(39.975196, 116.348597),
+          //Settings for the map
+          myOptions = {
+              zoom: 15,
+              center: point,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          },
+
+          //Finding the div we want the map to be in
+          mapCanvas = document.getElementById("map_canvas"),
+          //Pass in the div and map settings to the map
+          map = new google.maps.Map(mapCanvas, myOptions),
+
+          //
+          marker = new google.maps.Marker({
+              position: point,
+              map: map,
+              title: "海达网畅在这里"
+          });
+        }
+      }
+    </script>
+
+    <title>海达网畅</title>
+  </head>
+
+  <body onload="initialize()">
+    <span class="preloaded_images"></span>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <nav>
+            <ul>
+              <li><a href="about.html">关于我们</a></li>
+              <li><a href="join.html">加入我们</a></li>
+              <li><a href="/blogs">官方博客</a></li>
+            </ul>
+          </nav>
+          <!-- <h1 id="project_title">海达网畅</h1> -->
+          <a href="/"><img class="banner_logo" src="images/logo_dark.svg"/></a>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+
+<p class="image_holder"><img class="big_image" src="images/team_member.jpg" title="团队成员"></img></p>
+<h3>Founders</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione odit sint quae voluptas minima magnam eum esse hic repellat provident nemo culpa modi placeat repudiandae ducimus! Facilis assumenda quod quaerat!</p>
+
+<h3>Inventors</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas dolorum rem nam reiciendis ipsa vel porro tempora autem. Maiores doloribus debitis voluptatum perspiciatis adipisci aspernatur quod dolore minus natus saepe itaque id ipsam fugiat expedita quam iste vero necessitatibus quasi.</p>
+
+<h3>Development Team</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quod explicabo officiis aut placeat molestiae numquam beatae voluptate illo nemo maxime saepe impedit similique amet rem. Nulla assumenda culpa architecto.</p>
+
+<h3>Contact Us</h3>
+<ul>
+  <li>555-55555</li>
+  <li>北京市海淀区锦秋家园7号楼1502户</li>
+</ul>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <ul>
+          <li><a href="#" title="Contact" class="sns email"></a></li>
+          <li><a href="#" title="Tiwtter" class="sns twitter"></a></li>
+          <li><a href="#" title="Google Plus" class="sns gplus"></a></li>
+          <li><a href="#" title="Flickr" class="sns flickr"></a></li>
+          <li><a href="#" title="Github" class="sns github"></a></li>
+          <li><a href="#" title="Rss" class="sns rss"></a></li>
+        </ul>
+        <div>&copy;  2013 Hadventure.com All Rights Reserved</div>
+      </footer>
+    </div>
+  </body>
+</html>

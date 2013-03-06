@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="海达网畅 : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBdmKUGYS9XHMyjAx7A8Tfa75Er-vFnN0s&sensor=true"></script>
+    <script>
+      function initialize() {
+        if (document.getElementById("map_canvas")) {
+          var point = new google.maps.LatLng(39.975196, 116.348597),
+          //Settings for the map
+          myOptions = {
+              zoom: 15,
+              center: point,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          },
+
+          //Finding the div we want the map to be in
+          mapCanvas = document.getElementById("map_canvas"),
+          //Pass in the div and map settings to the map
+          map = new google.maps.Map(mapCanvas, myOptions),
+
+          //
+          marker = new google.maps.Marker({
+              position: point,
+              map: map,
+              title: "海达网畅在这里"
+          });
+        }
+      }
+    </script>
+
+    <title>海达网畅</title>
+  </head>
+
+  <body onload="initialize()">
+    <span class="preloaded_images"></span>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <nav>
+            <ul>
+              <li><a href="about.html">关于我们</a></li>
+              <li><a href="join.html">加入我们</a></li>
+              <li><a href="/blogs">官方博客</a></li>
+            </ul>
+          </nav>
+          <!-- <h1 id="project_title">海达网畅</h1> -->
+          <a href="/"><img class="banner_logo" src="images/logo_dark.svg"/></a>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+
+<span class="image_container big_image">
+  <p><img src="http://img3.3lian.com/2006/026/31/19.jpg" alt="每周一图" /></p>
+
+</span>
+<p class="hero_list">
+  <a class="btn btn-large btn-primary" href="about.html">了解更多</a>
+  <a class="btn btn-large btn-success" href="join.html">现在申请，加入我们</a>
+</p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <ul>
+          <li><a href="#" title="Contact" class="sns email"></a></li>
+          <li><a href="#" title="Tiwtter" class="sns twitter"></a></li>
+          <li><a href="#" title="Google Plus" class="sns gplus"></a></li>
+          <li><a href="#" title="Flickr" class="sns flickr"></a></li>
+          <li><a href="#" title="Github" class="sns github"></a></li>
+          <li><a href="#" title="Rss" class="sns rss"></a></li>
+        </ul>
+        <div>&copy;  2013 Hadventure.com All Rights Reserved</div>
+      </footer>
+    </div>
+  </body>
+</html>

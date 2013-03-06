@@ -1,5 +1,7 @@
+<% set_base_template 'base.html.erb' %>
+
 <span class="image_container big_image">
-  <%= render '../gen_html/index.html' %>
+  <%= render_partial env, 'HeaderImage' %>
 </span>
 <p class="hero_list">
   <a class="btn btn-large btn-primary" href="about.html">了解更多</a>

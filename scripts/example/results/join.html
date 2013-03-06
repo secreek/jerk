@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="海达网畅 : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBdmKUGYS9XHMyjAx7A8Tfa75Er-vFnN0s&sensor=true"></script>
+    <script>
+      function initialize() {
+        if (document.getElementById("map_canvas")) {
+          var point = new google.maps.LatLng(39.975196, 116.348597),
+          //Settings for the map
+          myOptions = {
+              zoom: 15,
+              center: point,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          },
+
+          //Finding the div we want the map to be in
+          mapCanvas = document.getElementById("map_canvas"),
+          //Pass in the div and map settings to the map
+          map = new google.maps.Map(mapCanvas, myOptions),
+
+          //
+          marker = new google.maps.Marker({
+              position: point,
+              map: map,
+              title: "海达网畅在这里"
+          });
+        }
+      }
+    </script>
+
+    <title>海达网畅</title>
+  </head>
+
+  <body onload="initialize()">
+    <span class="preloaded_images"></span>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <nav>
+            <ul>
+              <li><a href="about.html">关于我们</a></li>
+              <li><a href="join.html">加入我们</a></li>
+              <li><a href="/blogs">官方博客</a></li>
+            </ul>
+          </nav>
+          <!-- <h1 id="project_title">海达网畅</h1> -->
+          <a href="/"><img class="banner_logo" src="images/logo_dark.svg"/></a>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+
+<h3>办公环境</h3>
+<div class="office_div">
+  <span><img class="office_img" src="images/office.jpg" /></span>
+  <span><div id="map_canvas"></div></span>
+</div>
+
+<div class="benefit-list">
+<h3>报酬与福利</h3>
+
+<ul>
+<li>富有竞争力的年薪和奖励计划</li>
+<li>股份和期权方案</li>
+<li>灵活的工作时间 + 带薪假期</li>
+<li>可调高度的桌子 + 人体工程学椅子</li>
+<li>任选开发装备（ PC，Mac，多显示器）</li>
+<li>免费午餐、饮料、零食</li>
+<li>健身俱乐部会籍</li>
+<li>午睡专用房间</li>
+<li>恶劣天气在家工作</li>
+<li>自由开放的企业文化</li>
+</ul>
+
+
+</div>
+
+<div class="occupation">
+  <h3>项目经理</h3>
+
+<p>我们渴望找到这样一位项目经理(Program Manager)：他热爱技术，喜欢解决问题；他能够激励自我，也能激励团队；他喜欢在重大项目中获得的满足感，同时更愿意成就每个团队成员的价值；他推崇平等合作、善于委派工作，也有适时果断独裁的勇气；他在项目初期是个实用主义者，而在项目收尾阶段又是个完美主义者；他洞察项目的复杂程度，屏蔽干扰，一次只让队友解决一个简化的问题；他善于沟通，并且有足够的经验、耐心和智慧，懂得何时推动、何时退让。他知道他责任重大，这不是个锦上添花的角色：日常工作孜孜不倦，关键时刻力挽狂澜。</p>
+
+<h4>职责</h4>
+
+<ul>
+<li>规划发展远景，制定阶段任务</li>
+<li>管理控制项目进度</li>
+<li>和开发人员共同维护技术文档</li>
+<li>配合产品经理完善产品设计</li>
+<li>管理测试和发布</li>
+</ul>
+
+
+<h4>要求</h4>
+
+<ul>
+<li>3年以上项目管理经验</li>
+<li>对创业有激情，愿意在公司发展早期实现自我价值</li>
+<li>良好的沟通、协调、组织和团队建设能力</li>
+<li>不限开发平台、不限编程语言、不限学历、不限年龄</li>
+</ul>
+
+
+<h4>加分项</h4>
+
+<ul>
+<li>外企工作经验或创业经历</li>
+<li>全面的英语阅读和口头交流能力</li>
+<li>参与开发过知名产品</li>
+</ul>
+
+
+  <a href="#" class="btn btn-success">现在申请</a>
+</div>
+<div class="occupation">
+  <h3>招聘Java后台架构师</h3>
+
+<h4>职责</h4>
+
+<ul>
+<li>负责服务器后台软件体系架构的设计</li>
+<li>撰写相关架构的设计文档</li>
+<li>编写系统核心代码并解决疑难问题</li>
+<li>接口设计与管理</li>
+<li>规划未来的技术发展路线</li>
+<li>参与公司内部技术规范的制定</li>
+</ul>
+
+
+<h4>要求</h4>
+
+<ul>
+<li>五年以上工作经验，曾在大型IT公司担任过架构师相关工作</li>
+<li>本科及以上学历，计算机相关专业</li>
+<li>熟悉数据缓存及数据库开发（具备大型数据库的开发经验）</li>
+<li>深入了解java开发工具及主流开发框架，具有扎实的技术功底，熟悉主流技术架构，并有成功的开发经验</li>
+<li>熟悉TCP/IP协议，熟悉socket和多线程开发，具备高访问量web开发工作经验</li>
+<li>逻辑思维能力强，具有团队意识，具备较强的沟通理解能力</li>
+<li>熟练使用git进行版本控制</li>
+</ul>
+
+
+<h4>加分项</h4>
+
+<ul>
+<li>有电子商务类网站的开发经验</li>
+<li>曾经领导过10人以上的开发团队</li>
+<li>曾经参与过开源项目的开发</li>
+<li>有大型分布式系统开发经验</li>
+</ul>
+
+
+  <a href="#" class="btn btn-success">现在申请</a>
+</div>
+<div class="occupation">
+  <h3>前端工程师招聘广告</h3>
+
+<h4>职位描述</h4>
+
+<p>能够为产品设计并制作成熟的Web页面，并确保产品在不同平台、设备上兼具优质的用户使用体验；有扎实的Web技能，并致力于通过设计美观、简洁的Web界面提升产品的用户体验；能够时刻保持热情，积极主动参与产品表现设计。</p>
+
+<h4>职位要求</h4>
+
+<ul>
+<li>拥有扎实的HTML/CSS/JS基础</li>
+<li>能够熟练完成前端代码编写、调试、维护工作</li>
+<li>能够写出高性能、高可维护性的优美的代码</li>
+<li>能够熟练处理页面兼容性问题，代码具有良好的兼容性</li>
+<li>能够快速实现产品原型，适应迭代开发节奏</li>
+<li>注重利用合理的设计模式和模块化的组织方式对代码进行架构</li>
+<li>有团队协作精神，能够积极配合团队其他角色成员完成产品开发</li>
+</ul>
+
+
+<h4>加分条件</h4>
+
+<ul>
+<li>有过HTML5/CSS3及手机浏览器上的开发经验</li>
+<li>拥有自己的前端开发工作流，甚至开发过自己的前端框架</li>
+<li>对前端最新技术保持敏感，能够主动尝试新鲜技术</li>
+<li>三年以上互联网产品前端开发经验</li>
+<li>三个以上较复杂的前端开发案例</li>
+</ul>
+
+
+  <a href="#" class="btn btn-success">现在申请</a>
+</div>
+<div class="occupation">
+  <h3>招聘行政助理</h3>
+
+<h4>条件</h4>
+
+<ul>
+<li>女性，年龄 23 - 30 岁</li>
+<li>本科以上学历</li>
+<li>四级英语或同等读写能力</li>
+<li>勤快、聪明、开朗</li>
+<li>最好能开车</li>
+<li>一年以上从业经验</li>
+<li>在 IT 企业工作过为佳</li>
+</ul>
+
+
+<h4>职责</h4>
+
+<ul>
+<li>采购办公用品</li>
+<li>实施日常员工福利</li>
+<li>收发快递、邮件</li>
+<li>订酒店机票</li>
+<li>保管转交票据</li>
+<li>文秘</li>
+<li>完成和协调公司日常工作</li>
+</ul>
+
+
+  <a href="#" class="btn btn-success">现在申请</a>
+</div>
+
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <ul>
+          <li><a href="#" title="Contact" class="sns email"></a></li>
+          <li><a href="#" title="Tiwtter" class="sns twitter"></a></li>
+          <li><a href="#" title="Google Plus" class="sns gplus"></a></li>
+          <li><a href="#" title="Flickr" class="sns flickr"></a></li>
+          <li><a href="#" title="Github" class="sns github"></a></li>
+          <li><a href="#" title="Rss" class="sns rss"></a></li>
+        </ul>
+        <div>&copy;  2013 Hadventure.com All Rights Reserved</div>
+      </footer>
+    </div>
+  </body>
+</html>

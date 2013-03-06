@@ -1,8 +1,0 @@
-<%
-html = open('../gen_html/join.html').read
-html.get_elements['h4'].each do |ele| # get_elements可以找某个ruby的html解析库来实现
-  ele = render 'join_occupation.html.erb' # 增加样式和按钮
-end
-%>
-<!-- 最后显示处理之后的结果 -->
-<%= html %>

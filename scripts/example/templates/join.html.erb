@@ -1,0 +1,13 @@
+<% set_base_template 'base.html.erb' %>
+
+<h3>办公环境</h3>
+<div class="office_div">
+  <span><img class="office_img" src="images/office.jpg" /></span>
+  <span><div id="map_canvas"></div></span>
+</div>
+
+<div class="benefit-list">
+<%= render_partial env, 'Benefits' %>
+</div>
+
+<%= render_partial env, 'Hire', 'join_occupation.html.erb' %>

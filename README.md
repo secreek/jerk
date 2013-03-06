@@ -1,32 +1,29 @@
-#jerk 
+#jerk
 
 *Yet another framework for Github Pages.*
 
 *And, you know what, the jerk may not always be the bad guy.*
 
-## What will the jerk do for you
-- Gather
+## Installation
 
-He will gather parts of splited markdown files from different paths with the given command (rule).
+clone this repo to your computer, and run `bundle install`, after that, you are all set!
 
-- Compose
+## Usage
 
-he will compose the gathered markdown files into a big one with the given command.
+Open up a terminal, and get to the `scripts` folder, run `ruby jerk.rb` with command line arguments listed below
 
-- Scrawl 
+    -m, --markdown       path to your markdown folder
+    -t, --template       path to your template folder
+    -d, --destation      path to save the rendered html files
 
-He will scrawl (render) the big markdown file into html (pdf later maybe) snippets, and put the result html part into the given template with the given command.
+*Make sure your destation folder exists!*
 
-- Publish
+After running jerk, goto your destation folder, and see the result
 
-He will push the generated html files to the corresponding Github Pages repo's branch, and wait for the magic to happen.
+## Example
 
-## Ways to use the jerk
-- Manually beat him up
-	- Manually maintain the rule, the files
-	- Manually trigger the jerk to work
-	
-- Hire a robot
-	- Config a server for the rule, the markdown files
-	- Maintain the markdown files with the help of a git repo
-	- Triggers the jerk with the help of git hooks
+We've wrote a simple example to show you what jerk can do. To play with jerk, go to the `example` folder, make some changes to the `markdown` files, or edit the `template`s, and run jerk with 
+
+`ruby ./jerk.rb -m ./example/markdown -t ./example/templates -d ./example/results` 
+
+and checkout what jerk has done for you in `examples/results` folder.
