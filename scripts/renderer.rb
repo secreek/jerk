@@ -2,9 +2,14 @@ require 'rdiscount'
 
 module Renderer
   attr_accessor :base_template_file
+  attr_accessor :partial_title
 
   def set_base_template base_file
     @base_template_file = base_file
+  end
+
+  def set_partial_title title
+    @partial_title = title
   end
 
   def render_partial env, prefix, item_template=nil

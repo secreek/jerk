@@ -69,6 +69,7 @@ page_list.each do |folder_name|
   content = template_erb.result(binding)
   if @base_template_file # then, wrap with base template
     base_template_path = full_path template_folder, @base_template_file
+    partial_title = nil || @partial_title
     base_erb = ERB.new open(base_template_path).read
     content = base_erb.result(binding)
   end
