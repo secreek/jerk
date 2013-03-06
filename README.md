@@ -6,7 +6,7 @@
 
 ## Installation
 
-clone this repo to your computer, and run `bundle install`, after that, you are all set!
+clone this repo to your computer, and run `bundle install` in `scripts` folder, after that, you are all set!
 
 ## Usage
 
@@ -18,12 +18,12 @@ Open up a terminal, and get to the `scripts` folder, run `ruby jerk.rb` with com
 
 *Make sure your destation folder exists!*
 
-After running jerk, goto your destation folder, and see the result
+After you see jerk backs off, go to your destation folder, and see the result.
 
 ## Example
 
 We've wrote a simple example to show you what jerk can do. To play with jerk, go to the `example` folder, make some changes to the `markdown` files, or edit the `template`s, and run jerk with 
 
-`ruby ./jerk.rb -m ./example/markdown -t ./example/templates -d ./example/results` 
+`ruby scripts/jerk.rb -m example/markdown -t example/templates -d example/results` 
 
-and checkout what jerk has done for you in `examples/results` folder.
+and checkout what jerk has done for you in `example/results` folder.
