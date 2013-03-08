@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Jerk by hadventure</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/hadventure/jerk">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Jerk</h1>
+            <h2>Gathers parts of markdown file, compose them into a big markdown, and render it as html.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/hadventure/jerk/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/hadventure/jerk/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>jerk</h1>
+
+<p><em>Yet another framework for Github Pages.</em></p>
+
+<p><em>And, you know what, the jerk may not always be the bad guy.</em></p>
+
+<h2>Installation</h2>
+
+<p>Clone this repo to your computer, and run <code>bundle install</code> in <code>scripts</code> folder, after that, you are all set!</p>
+
+<h2>Usage</h2>
+
+<p>Open up a terminal, and get to the <code>scripts</code> folder, run <code>ruby jerk.rb</code> with command line arguments listed below</p>
+
+<pre><code>-m, --markdown       path to your markdown folder
+-t, --template       path to your template folder
+-d, --destation      path to save the rendered html files
+</code></pre>
+
+<p><em>Make sure your destation folder exists!</em></p>
+
+<p>After you see jerk backs off, go to your destation folder, and see the result.</p>
+
+<h2>Example</h2>
+
+<p>We've wrote a simple example to show you what jerk can do. To play with jerk, go to the <code>example</code> folder, make some changes to the <code>markdown</code> files, or edit the <code>template</code>s, and run jerk with </p>
+
+<p><code>ruby scripts/jerk.rb -m example/markdown -t example/templates -d example/results</code> </p>
+
+<p>and checkout what jerk has done for you in <code>example/results</code> folder.</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/hadventure">hadventure</a> can be found on <a href="https://github.com/hadventure/jerk">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-39109488-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
