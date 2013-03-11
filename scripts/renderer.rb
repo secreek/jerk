@@ -15,8 +15,10 @@ module Renderer
   def render_partial env, prefix, item_template=nil
     result = ""
     content_path = env[:content_path]
-    Dir[content_path + "/#{prefix}*.md"].each do |file|
+    Dir[content_path + "/#{prefix}-*.md"].each do |file|
       html = RDiscount.new(open(file).read).to_html
+      /.*#{prefix}-(\d\.)*(.*).md$/ =~ file
+      filename = "#$2" ＃ add filename as part of the input parameters
       if item_template
         item_template_path = "#{env[:template_folder]}/#{item_template}"
         html = ERB.new(open(item_template_path).read).result(binding)
