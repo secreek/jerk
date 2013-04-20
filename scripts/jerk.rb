@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 require 'erb'
 require 'optparse'
+require 'json'
 
 require_relative 'file_utils'
 require_relative 'renderer'
@@ -11,6 +12,7 @@ include Renderer
 markdown_folder = nil
 template_folder = nil
 result_folder = nil
+config_file_path = nil
 
 # Parses command line arguments
 OptionParser.new do |opts|
@@ -26,6 +28,10 @@ OptionParser.new do |opts|
 
   opts.on("-d", "--destination DESTINATION_FOLDER", "Path to save the rendered html files") do |d|
     result_folder = d
+  end
+
+  opts.on("-c", "--config CONFIG_FILE_PATH", "Some configuration stuff for the rendering process") do |c|
+    config_file_path = c
   end
 
   opts.on_tail("-h", "--help", "Show help message") do
@@ -61,6 +67,10 @@ page_list.each do |folder_name|
   result_path = full_path result_folder, "#{folder_name}.html"
   @base_template_file = nil
 
+  conf_content = open(config_file_path).read() if config_file_path
+  conf = JSON.load(conf_content) if conf_content
+  conf = {} unless conf
+
   env = {
     :content_path => content_path,
     :template_folder => template_folder
@@ -70,6 +80,7 @@ page_list.each do |folder_name|
   if @base_template_file # then, wrap with base template
     base_template_path = full_path template_folder, @base_template_file
     partial_title = nil || @partial_title
+
     base_erb = ERB.new open(base_template_path).read
     content = base_erb.result(binding)
   end
