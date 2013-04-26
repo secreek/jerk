@@ -31,10 +31,11 @@ module FileUtils
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = (url.scheme == 'https') if uri_str.start_with? 'https://'
       request = Net::HTTP::Get.new(url.path)
-      puts "Grabbing document from\t #{uri_str}"
+      puts "FETCHING: #{uri_str}"
       response = http.start {|http| http.request(request) }
-      puts "Done."
-      response.body
+      puts "\tDone."
+      return response.body if response.is_a?(Net::HTTPSuccess) # Copied from vm's code
+      nil
   end
   
   # TODO - Cached
