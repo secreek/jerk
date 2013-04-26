@@ -1,0 +1,75 @@
+{
+    "sitemap": {
+        "homepage": {
+			"page": "index.html",
+			"event": "flase",
+			"template": "https://raw.github.com/secreek/drinkup/homepage/homepage/templates/homepage.html.erb",
+			"config": {
+				"upcoming": ["hit-201304"],
+				"past": ["hadventure", "zhfs"]
+			}
+		},
+		"term-of-service": {
+			"page": "term.html",
+			"event": "fasle",
+			"template": ""
+		},
+		"hit-201304": {	
+			"event": "true",
+			"public": "true",
+			"page": "hit-201304/index.html",
+        	"template": "https://raw.github.com/secreek/drinkup/hit-201304/templates/templates/index.html.erb",
+			"config": {
+				"title": "Harbin Github Users Hackathon &amp; Drinkup",
+				"description": "Come join the fantastic camp devoted to celebrating the popular favor of Git and Github.",
+				"datetime-human": "April 28-29, 2013",
+				"calendar-year": "2013",
+				"calendar-month": "April",
+				"calendar-day": "28",
+				"event-url": "http://drinkup.in/hit",
+				"poster-url": "http://drinkup.in/hit-201304/poster.svg",
+				"agenda-summary-by-day": ["hackathon", "drinkup"],
+			    "summary" : "Drink Up",
+			    "place" : "hit",
+			    "date" : "201304",
+			    "location" : "Harbin Institute of Technology",
+			    "start" : {
+			        "dateTime" : "2013-04-28T10:00:00.000+08:00"
+			    },
+			    "end" : {
+			        "dateTime" : "2013-04-29T16:00:00.000+08:00"
+			    },
+			    "latitude": 45.74599,
+			    "longitude": 126.62743
+			}
+		},
+		"hadventure": {
+			"event": "true",
+			"public": "false",
+			"config": {
+				"title": "Developer Drinkup.in Beijing",
+				"datetime-human": "February 14, 2013, 2013",
+			}
+		},
+		"zhfs": {
+			"event": "true",
+			"public": "false",
+			"config": {
+				"title": "Private Drinkup.in @zhf's",
+				"datetime-human": "November 3, 2012",
+			}
+		}
+    },
+	"hooks": {
+		"pre-site": [
+			"#fetch-required-resources.sh"
+		],
+		"post-site": [
+			"#sync-files-to-gh-pages.sh"
+		],
+		"pre-page": [
+		],
+		"post-page": [
+		]
+	}
+}
